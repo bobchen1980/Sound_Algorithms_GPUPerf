@@ -15,7 +15,8 @@ This repository contains a GPU performance testing script using CUDA to evaluate
 To compile the code, use the following command:
 
 ```bash
-nvcc -o gpu_performance_test main.cpp -lcublas -lcufft -lnvml
+make clean
+make
 ```
 
 ## Usage
@@ -23,7 +24,7 @@ nvcc -o gpu_performance_test main.cpp -lcublas -lcufft -lnvml
 Run the compiled binary with the optional argument --iter to specify the number of test iterations:
 
 ```bash
-./gpu_performance_test --iter <iterations>
+./multi_gpu_performance_test --iter <iterations>
 ```
 
 By default, the script runs 10 iterations if the --iter option is not provided.
